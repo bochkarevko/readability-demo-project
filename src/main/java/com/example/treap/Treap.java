@@ -97,10 +97,10 @@ class Treap {
 
         if (element < node.element) {
             node.left = insert(element, node.left);
-            node = checkAndRotateRight(node);
+            node = rotateLeftIfNecessary(node);
         } else {
             node.right = insert(element, node.right);
-            node = rotateLeftIfNecessary(node);
+            node = checkAndRotateRight(node);
         }
 
         return node;

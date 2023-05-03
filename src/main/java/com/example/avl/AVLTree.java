@@ -22,10 +22,6 @@ public class AVLTree {
             return node;
         }
 
-        if (node == nil) {
-            return new Node(key);
-        }
-
         if (node.key > key) {
             node.left = insert(node.left, key);
         } else {

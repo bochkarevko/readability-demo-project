@@ -65,9 +65,7 @@ public class AVL {
     }
 
     InnerAvl add(InnerAvl n, int k) {
-        if (n == null) {
-            return new InnerAvl(k);
-        } else if (n.element > k) {
+        if (n.element > k) {
             n.leftChild = add(n.leftChild, k);
         } else if (n.element < k) {
             n.rightChild = add(n.rightChild, k);

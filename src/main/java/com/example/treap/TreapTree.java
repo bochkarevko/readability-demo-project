@@ -43,19 +43,19 @@ class TreapTree {
     private TreapNode insert(int X, TreapNode node) {
         if (X < node.elementValue) {
             node.leftChild = insert(X, node.leftChild);
-            if (node.leftChild.priorityValue < node.priorityValue) {
-                TreapNode L = node.leftChild;
-                node.leftChild = L.rightChild;
-                L.rightChild = node;
-                return L;
-            }
-        } else if (X > node.elementValue) {
-            node.rightChild = insert(X, node.rightChild);
             if (node.rightChild.priorityValue < node.priorityValue) {
                 TreapNode R = node.rightChild;
                 node.rightChild = R.leftChild;
                 R.leftChild = node;
                 return R;
+            }
+        } else if (X > node.elementValue) {
+            node.rightChild = insert(X, node.rightChild);
+            if (node.leftChild.priorityValue < node.priorityValue) {
+                TreapNode L = node.leftChild;
+                node.leftChild = L.rightChild;
+                L.rightChild = node;
+                return L;
             }
         }
 
