@@ -1,4 +1,4 @@
-package com.example.treap;
+package com.example;
 
 import java.util.Random;
 

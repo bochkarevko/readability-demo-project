@@ -1,4 +1,4 @@
-package com.example.avl;
+package com.example;
 
 public class AVL {
     private InnerAvl root = null;

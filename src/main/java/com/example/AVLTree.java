@@ -1,4 +1,4 @@
-package com.example.avl;
+package com.example;
 
 public class AVLTree {
     private static final Node nil = new Node();
